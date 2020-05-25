@@ -33,6 +33,8 @@ The following dependencies are needed:
 ![](49.PNG)
 ![](50.PNG)
 
+* more detail can follow my WeChat Public article.
+
 ## Contact
 * https://github.com/junqiangchen
 * email: 1207173174@qq.com
