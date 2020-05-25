@@ -23,8 +23,8 @@ The following dependencies are needed:
 ## Result
 
 * train loss and train accuracy
-![loss.PNG]
-![accuracy.PNG]
+![](loss.PNG)
+![](accuracy.PNG)
 
 * test dataset segmentation result：left is groundtruth,right is predict
 ![](46.PNG)
