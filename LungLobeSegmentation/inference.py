@@ -35,7 +35,11 @@ def inference():
         subset_path = heart_path + "/" + str(path_list[subsetindex])
         heart_src = sitk.ReadImage(subset_path, sitk.sitkInt16)
         heart_array = sitk.GetArrayFromImage(heart_src)
-        ys_pd_sitk = Vnet3d.prediction(heart_array / 255.)
+        ys_pd = Vnet3d.prediction(heart_array / 255.)
+        ys_pd_sitk = sitk.GetImageFromArray(ys_pd)
+        ys_pd_sitk.SetDirection(heart_src.GetDirection())
+        ys_pd_sitk.SetSpacing(heart_src.GetSpacing())
+        ys_pd_sitk.SetOrigin(heart_src.GetOrigin())
         # step3 save output image
         out_mask_image = out_path + "/" + str(path_list[subsetindex])
         sitk.WriteImage(ys_pd_sitk, out_mask_image)
